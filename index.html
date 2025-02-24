@@ -42,9 +42,9 @@
             margin: 2rem 2rem;
         }
         iframe {
-            width: 300px;
-            height: 25vh;
-            border-radius: 10%;
+            width: 20em;
+            height: 15em;
+            border-radius: 1.5rem;
 
         }
         main {
@@ -56,7 +56,7 @@
             font-family: 'Maven Pro', sans-serif;
             font-weight: bold;
             text-align: center;
-            margin-top: 15vh;
+            margin-top: 12vh;
             margin-bottom: 10vh;
         }
         h2,h3,h4,h5,h6 {
@@ -81,11 +81,24 @@
             left: 0;
             position: fixed; /* Set cloud in the background to move relative to vertical scroll position */
             z-index: -1; /* Set cloud behind the text */
-            animation: moveCloud 5s linear infinite;
+            animation: moveCloud1 5s linear infinite;
+
 
         }
-
-        @keyframes moveCloud {
+        .cloud-2 {
+            height: 50vh;
+            width: 100vw;
+            overflow: hidden;
+            background: url('assets/images/cloud-2.png') no-repeat;
+            background-size: 50vw auto;
+            top: 30vh;
+            left: 0;
+            position: fixed; /* Set cloud in the background to move relative to vertical scroll position */
+            z-index: -1; /* Set cloud behind the text */
+            animation: moveCloud2 5s linear infinite;
+            animation-delay: 2.5s; /* Offset start of second cloud 2.5s after first cloud */
+        }
+        @keyframes moveCloud1 {
             0% {
                 background-position: -50vw 0;
                 opacity: 100%;
@@ -100,19 +113,32 @@
                 opacity: 100%;
             }
         }
+        @keyframes moveCloud2 {
+            0% {
+                background-position: -50vw 25vh;
+                opacity: 100%;
+            }
+
+            50% {
+                opacity: 50%;
+            }
+
+            100% {
+                background-position: 100vw 25vh;
+                opacity: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="cloud-1"></div>
+        <div class="clouds cloud-1"></div>
+        <div class="clouds cloud-2"></div>
         <h1>NF | Drifting</h1>
-        <!-- Used Youtube's embed code when clicking share
+        <!-- href is Youtube's embed link when clicking share
             URL: https://www.youtube.com/watch?v=AQ7-qKQMce4. -->
-        <iframe src="https://www.youtube.com/embed/AQ7-qKQMce4?si=iT_F3czcq13hhKlr" 
-        title="YouTube video player" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/AQ7-qKQMce4?si=iT_F3czcq13hhKlr" allowfullscreen></iframe>
     </header>
     <main>
         <h2>[Chorus]</h2>
