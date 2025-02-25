@@ -1,36 +1,35 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
+/* Colors will be:
+Deep Charcoal: hsl(240, 3%, 11%) - background
+Ice Blue: hsl(198, 34%, 73%) - h1,h2 gradient padding with glow
+Silver: hsl(0, 0%, 77%) - p with low glow
+*/
 
 html {
     box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
     box-sizing: inherit;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
 body {
+    width: 100%;
+    height: 100%;
     font-family: 'Mukta Mahee', Arial, sans-serif;
     font-weight: normal;
-    /* width: 100%;
-    height: 100%; */
-    background: linear-gradient(to bottom, skyblue, darkgrey);
+    color: hsl(0, 0%, 77%);
+    background-color: hsl(240, 3%, 11%);
 }
 
 header {
+    padding: 2em 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
 }
 
 iframe {
@@ -45,19 +44,21 @@ iframe {
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 h1 {
+    padding: 2em 3em;
+    font-size: 3em;
     text-transform: uppercase;
     font-family: 'Maven Pro', Impact, sans-serif;
     font-weight: bold;
-    font-size: 3em;
     text-align: center;
-    margin-top: 12vh;
-    margin-bottom: 10vh;
+    color: hsl(198, 34%, 73%);
 }
 
 h2 {
+    padding: 2em 3em;
     font-size: 36px;
 }
 
@@ -68,12 +69,17 @@ h5,
 h6 {
     font-family: 'Maven Pro', Impact, sans-serif;
     font-weight: bold;
-    padding: 2rem;
 }
 
 p {
+    /* align-self: stretch; */
+    /* Revert flex item's align to default */
+    max-width: 75ch;
+    /* 75 characters per line for easy reading */
     column-count: 2;
-    padding: 2rem;
+    column-gap: 5em;
+    /* To widen gap between column paragraphs */
+    padding: 2em 3em;
     font-size: 1.5em;
     line-height: 1.5;
     letter-spacing: 1px;
@@ -82,8 +88,14 @@ p {
 }
 
 @media (max-width: 768px) {
+    
+    h2 {
+        padding: 1em 1.5em;
+        /* Decrease padding by half so as to prevent wasting 
+        screen real estate */
+    }
     p {
-        font-size: 14px;
+        font-size: 1em;
         column-count: 1;
     }
     
