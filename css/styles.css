@@ -20,9 +20,8 @@ html {
 body {
     font-family: 'Mukta Mahee', sans-serif;
     font-weight: normal;
-
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     background: linear-gradient(to bottom, skyblue, darkgrey);
 }
 
@@ -89,10 +88,11 @@ p {
 
 .cloud-1 {
 
-    width: 100vw;
+    width: 100%;
     /* cloud will be able to move across the width of the viewport */
-    height: 250px;
-    background: url('assets/images/cloud-1.png') no-repeat;
+    height: 100%;
+    background: url('../assets/images/cloud-1.png') no-repeat;
+    /* ../ one folder up from css */
     background-size: 50vw auto;
     position: fixed;
     /* Set cloud in the background to move relative to vertical scroll position */
@@ -105,10 +105,10 @@ p {
 
 .cloud-2 {
 
-    width: 100vw;
+    width: 100%;
     /* cloud will be able to move across the width of the viewport */
-    height: 250px;
-    background: url('assets/images/cloud-2.png') no-repeat;
+    height: 100%;
+    background: url('../assets/images/cloud-2.png') no-repeat;
     background-size: 50vw auto;
     position: fixed;
     /* Set cloud in the background to move relative to vertical scroll position */
@@ -121,7 +121,7 @@ p {
 
 @keyframes moveCloud1 {
     0% {
-        background-position: -50vw 0;
+        background-position: -100vw 0;
         opacity: 100%;
     }
 
@@ -137,7 +137,7 @@ p {
 
 @keyframes moveCloud2 {
     0% {
-        background-position: -50vw 100%;
+        background-position: -100vw 100%;
         opacity: 100%;
     }
 
