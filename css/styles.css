@@ -8,7 +8,9 @@ Silver: hsl(0, 0%, 77%) - p with low glow
 
 html {
     box-sizing: border-box;
+    font-size: 18px;
 }
+
 *,
 *:before,
 *:after {
@@ -59,7 +61,7 @@ h1 {
 
 h2 {
     padding: 2em 3em;
-    font-size: 36px;
+    font-size: 2em;
 }
 
 h2,
@@ -88,15 +90,16 @@ p {
 }
 
 @media (max-width: 768px) {
-    
+
     h2 {
         padding: 1em 1.5em;
         /* Decrease padding by half so as to prevent wasting 
         screen real estate */
     }
+
     p {
         font-size: 1em;
         column-count: 1;
     }
-    
+
 }
