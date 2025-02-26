@@ -18,8 +18,8 @@ html {
 }
 
 body {
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     font-family: 'Mukta Mahee', Arial, sans-serif;
     font-weight: normal;
     color: hsl(0, 0%, 77%);
@@ -106,7 +106,14 @@ p:hover {
 }
 
 @media (max-width: 768px) {
+
+    
     h1 {
+        letter-spacing: 0.1em;
+    }
+    h1:hover {
+        font-weight: normal;
+        text-shadow: 0 0 10px  hsl(0, 0%, 100%);
         letter-spacing: 0.2em;
     }
 
