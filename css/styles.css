@@ -8,7 +8,7 @@ Silver: hsl(0, 0%, 77%) - p with low glow
 
 html {
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 10px;
 }
 
 *,
@@ -88,10 +88,12 @@ p {
     /* 75 characters per line for easy reading */
     column-count: 2;
     column-gap: 5em;
+    column-rule: 2px solid hsl(198, 34%, 73%);
     /* To widen gap between column paragraphs */
     padding: 2em 3em;
     font-size: 1.5em;
     line-height: 1.5;
+    /* increase line height for readability */
     letter-spacing: 1px;
     hyphens: auto;
     text-align: left;
@@ -101,11 +103,12 @@ p {
 p:hover {
     text-shadow: 0 0 0.5em hsl(0, 0%, 100%);
     color: hsl(0, 0%, 100%);
-
-
 }
 
 @media (max-width: 768px) {
+    h1 {
+        letter-spacing: 0.2em;
+    }
 
     h2 {
         padding: 1em 1.5em;
@@ -116,6 +119,14 @@ p:hover {
     p {
         font-size: 1em;
         column-count: 1;
+        hyphens: auto;
+        max-width: 75ch;
+        /* 75 characters per line for easy reading */
+        line-height: 1.5;
+    }
+    p:hover {
+        text-shadow: 0 0 0.5em hsl(0, 0%, 100%);
+        color: hsl(0, 0%, 100%);
     }
 
 }
