@@ -23,7 +23,7 @@ body {
     font-family: 'Mukta Mahee', Arial, sans-serif;
     font-weight: normal;
     color: hsl(0, 0%, 77%);
-    background-color: hsl(240, 3%, 11%);
+    background: linear-gradient(to bottom, hsl(240, 3%, 11%), hsl(240, 3%, 20%));
 }
 
 header {
@@ -103,6 +103,9 @@ p {
 p:hover {
     text-shadow: 0 0 0.5em hsl(0, 0%, 100%);
     color: hsl(0, 0%, 100%);
+}
+footer {
+
 }
 
 @media (max-width: 768px) {
