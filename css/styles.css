@@ -8,7 +8,9 @@ Silver: hsl(0, 0%, 77%) - p with low glow
 
 html {
     box-sizing: border-box;
+    /* Include padding and border when setting width and height */
     font-size: 10px;
+    /* Root font size */
 }
 
 *,
@@ -21,34 +23,57 @@ body {
     /* width: 100%;
     height: 100%; */
     font-family: 'Mukta Mahee', Arial, sans-serif;
+    /* Heading typeface */
     font-weight: normal;
     color: hsl(0, 0%, 77%);
+    /* White font color */
     background: linear-gradient(to bottom, hsl(240, 3%, 11%), hsl(240, 3%, 20%));
+    /* Dark gradient background */
 }
 
 header {
     padding: 2em 3em;
     display: flex;
+    /* Set header as flex container */
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 iframe {
-    width: 100%;
     max-width: 400px;
-    min-width: 200px;
+    /* Limit iframe width for large view ports */
     height: 200px;
+    /* Set height fixed */
     border-radius: 1.5rem;
+    /* Smooth corners */
 
+    box-shadow: 0 5px 20px 2px #999;
+    /* Light manipulation hover effect */
+    position: relative;
+    /* Be able to move iframe outside of normal flow */
+    top: 0;
+    transition: box-shadow 1s, top 1s;
+    /* Hover transition */
+
+}
+iframe:hover {
+    box-shadow: 0 0px 10px 1px #999;
+    top: 5px;
+    /* Lower iframe on hover */
 }
 
 main {
     display: flex;
+    /* Flex container for main */
     flex-direction: column;
     align-items: center;
 }
-
+article {
+    display: flex;
+    /* Flex container for article */
+    flex-direction: column;
+    align-items: center;
+}
 h1 {
     padding: 2em 3em;
     font-size: 3em;
@@ -59,14 +84,17 @@ h1 {
     letter-spacing: 0.35em;
     color: hsl(198, 34%, 73%);
     transition: text-shadow 3s, letter-spacing 3s, font-weight 3s;
+    /* Drifting effect transition */
 }
 h1:hover {
     font-weight: normal;
     text-shadow: 0 0 10px  hsl(0, 0%, 100%);
+    /* Glow effect */
     letter-spacing: 1em;
+    /* Drifting effect by increasing letter space */
 }
-
-h2 {
+article>h2,
+main>h2 {
     padding: 2em 3em;
     font-size: 2em;
     letter-spacing: 0.55em;
@@ -87,25 +115,49 @@ p {
     max-width: 75ch;
     /* 75 characters per line for easy reading */
     column-count: 2;
+    /* Divide paragraph into two columns */
     column-gap: 5em;
-    column-rule: 2px solid hsl(198, 34%, 73%);
     /* To widen gap between column paragraphs */
+    column-rule: 2px solid hsl(198, 34%, 73%);
     padding: 2em 3em;
     font-size: 1.5em;
     line-height: 1.5;
     /* increase line height for readability */
     letter-spacing: 1px;
     hyphens: auto;
+    /* Auto hyphenation */
     text-align: left;
+    /* Visually better than centering */
     text-shadow: 0 0 0.5em hsl(0, 0%, 25%);
     transition: text-shadow 2s, color 2s, letter-spacing 2s;
+    /* Glow effect */
 }
 p:hover {
     text-shadow: 0 0 0.5em hsl(0, 0%, 100%);
     color: hsl(0, 0%, 100%);
 }
-footer {
-
+footer>details {
+    text-align: center;
+    padding: 2em 3em;
+    font-size: 1.5em;
+    /* flex-direction: column;
+    align-items: center; */
+    transition: text-shadow 1s, color 1s;
+    /* Glow effect */
+}
+footer>details>a {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+    color: hsl(198, 34%, 73%);
+    text-decoration: none;
+    /* Remove underline */
+    transition: text-shadow 1s, color 1s;
+    /* Glow effect */
+}
+footer>details>a:hover {
+    text-shadow: 0 0 0.5em hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
 }
 
 @media (max-width: 768px) {
@@ -129,6 +181,7 @@ footer {
     p {
         font-size: 1em;
         column-count: 1;
+        /* Keep column count to 1 for smaller viewports */
         hyphens: auto;
         max-width: 75ch;
         /* 75 characters per line for easy reading */
