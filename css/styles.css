@@ -82,7 +82,7 @@ h1 {
     font-weight: bold;
     text-align: center;
     letter-spacing: 0.35em;
-    color: hsl(198, 34%, 73%);
+    color: hsl(198, 65%, 63%);
     transition: text-shadow 3s, letter-spacing 3s, font-weight 3s;
     /* Drifting effect transition */
 }
@@ -98,13 +98,20 @@ main>h2 {
     padding: 2em 3em;
     font-size: 2em;
     letter-spacing: 0.55em;
+    position: relative;
+    top: 0px;
+    transition: text-shadow 2s, top 2s;
 }
-
+h2:hover {
+    text-shadow: 0 5px 10px  hsl(0, 0%, 100%);
+    top: -5px;
+}
 h2,
 h3,
 h4,
 h5,
 h6 {
+    color: hsl(165, 100%, 50%);
     font-family: 'Maven Pro', Impact, sans-serif;
     font-weight: bold;
 }
@@ -131,6 +138,10 @@ p {
     text-shadow: 0 0 0.5em hsl(0, 0%, 25%);
     transition: text-shadow 2s, color 2s, letter-spacing 2s;
     /* Glow effect */
+}
+article>p {
+    column-count: 1;
+    text-align: justify;
 }
 p:hover {
     text-shadow: 0 0 0.5em hsl(0, 0%, 100%);
