@@ -83,10 +83,11 @@ h1 {
     text-align: center;
     letter-spacing: 0.35em;
     color: hsl(198, 65%, 63%);
-    transition: text-shadow 3s, letter-spacing 3s, font-weight 3s;
+    transition: text-shadow 3s, letter-spacing 3s, font-weight 3s, color 3s;
     /* Drifting effect transition */
 }
 h1:hover {
+    color: hsl(198, 100%, 72%);
     font-weight: normal;
     text-shadow: 0 0 10px  hsl(0, 0%, 100%);
     /* Glow effect */
@@ -100,9 +101,10 @@ main>h2 {
     letter-spacing: 0.55em;
     position: relative;
     top: 0px;
-    transition: text-shadow 2s, top 2s;
+    transition: text-shadow 2s, top 2s, color 2s;
 }
 h2:hover {
+    color: hsl(165, 100%, 50%);
     text-shadow: 0 5px 10px  hsl(0, 0%, 100%);
     top: -5px;
 }
@@ -111,7 +113,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: hsl(165, 100%, 50%);
+    color: hsl(165, 100%, 38%);
     font-family: 'Maven Pro', Impact, sans-serif;
     font-weight: bold;
 }
